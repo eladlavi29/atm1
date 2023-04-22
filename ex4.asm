@@ -13,12 +13,14 @@ _start:
 	movl Value(%rip), %edx
 
 loop_HW1:
+	#place the node's val in eax
+	movl (%rdi), %eax
+
 	#Check if the current node has the same val as Value
-	cmpl %edx, %rdi
+	cmpl %edx, %eax
 	jne ValNotEqual_HW1
 	
-	movl $222, %rdi
-	
+	movl $222, dword ptr %rdi
 	
 	ValNotEqual_HW1:
 	
