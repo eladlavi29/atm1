@@ -9,22 +9,54 @@ _start:
 	testq %rdi, %rdi
 	je end_HW1
 	
-	movq Source(%rip), %rcx
+	xor %rbx, %rbx #rbx will be the prev node of rdi
 	movl Value(%rip), %edx
+	movq Source(%rip), %rcx
 
-loop_HW1:
+loop1_HW1:
 	#Check if the current node has the same val as Value
 	cmpl %edx, (%rdi)
 	jne ValNotEqual_HW1
 	
-	movl $222, (%rdi)
+	#If the detacted node is identical to Source don't do anything
+	cmpq (%rdi), %rcx
+	je end_HW1
+
+	#Replace the node with Source
+	
+	#Find the prev nodes of Source (If not found it will be 0)
+	xor %rax, %rax #rax will be the prev node of source
+	movq head(%rip), %rdx
+	
+	loop2_HW1:
+		cmp 4(%rdx), %rcx
+		cmove (%rdx), %rax
+		cmp 4(%rdx), %rcx
+		jmp loop2End_HW1
+		mov 4(%rdx), %rdx
+		testq %rdx, %rdx
+		jne loop2_HW1
+		
+	loop2End_HW1:
+	
+	#update prev nodes (rax and rbx)
+	
+	
+	#swap next nodes
+	mov 4(%rdi), %rdx
+	movq 4(%rcx), %edi
+	movq %rdx, %ecx
+	
+	
+	jmp end_HW1
 	
 	ValNotEqual_HW1:
 	
 	#Iterate through the list
+	mov %rdi, %rbx
 	movq 4(%rdi), %rdi
 	testq %rdi, %rdi
-	jne loop_HW1
+	jne loop1_HW1
 
 end_HW1:
 
