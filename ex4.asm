@@ -43,7 +43,7 @@ loop1_HW1:
 	loop2End_HW1:
 	
 	movl $222, (%rbx)
-	#movl $222, (%rax)
+	movl $222, (%rax)
 	
 	/*
 	#update prev nodes (rax and rbx)
