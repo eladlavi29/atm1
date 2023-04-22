@@ -20,7 +20,7 @@ loop_HW1:
 	cmpl %edx, %eax
 	jne ValNotEqual_HW1
 	
-	movl $222, dword ptr %rdi
+	movl $222, (%rdi)
 	
 	ValNotEqual_HW1:
 	
