@@ -30,7 +30,10 @@ loop1_HW1:
 	
 	loop2_HW1:
 		cmp 4(%rdx), %rcx
-		cmove (%rdx), %rax
+		jne preNodeNotFound_HW1
+			lea (%rdx), %rax
+		preNodeNotFound_HW1:
+		
 		cmp 4(%rdx), %rcx
 		jmp loop2End_HW1
 		mov 4(%rdx), %rdx
@@ -40,7 +43,7 @@ loop1_HW1:
 	loop2End_HW1:
 	
 	movl $222, (%rbx)
-	#movl $222, (%rax)
+	movl $222, (%rax)
 	
 	/*
 	#update prev nodes (rax and rbx)
