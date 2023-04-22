@@ -18,7 +18,7 @@ loop_HW1:
 	#Iterate through the list
 	movq 4(%rdi), %rdi
 	testq %rdi, %rdi
-	jne .loop_HW1
+	jne loop_HW1
 
 end_HW1:
 
