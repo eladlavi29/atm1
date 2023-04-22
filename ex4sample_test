@@ -7,11 +7,11 @@
   jne bad_exit
   
   mov 4(%rax), %rax
-  cmpl $6, (%rax)
+  cmpl $-5, (%rax)
   jne bad_exit
   
   mov 4(%rax), %rax
-  cmpl $-5, (%rax)
+  cmpl $6, (%rax)
   jne bad_exit
   
   mov 4(%rax), %rax
