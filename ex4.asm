@@ -32,10 +32,9 @@ loop1_HW1:
 		cmp 4(%rdx), %rcx
 		jne preNodeNotFound_HW1
 			lea (%rdx), %rax
+			jmp loop2End_HW1
 		preNodeNotFound_HW1:
-		
-		cmp 4(%rdx), %rcx
-		jne loop2End_HW1
+				
 		mov 4(%rdx), %rdx
 		testq %rdx, %rdx
 		jne loop2_HW1
