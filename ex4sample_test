@@ -3,7 +3,8 @@
 .section .text
 
   xor %rax, %rax
-  testq %rax, %rax
+  
+  cmpq $0, %rax
   jne bad_exit
 
   movq $60, %rax
