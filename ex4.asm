@@ -13,7 +13,7 @@ _start:
 loop_HW1:
 	#Check if the current node has the same val as Value
 	#movl (%rdi), %edx
-	inc (%rdi)
+	incl (%rdi)
 	
 	#Iterate through the list
 	movq 4(%rdi), %rdi
