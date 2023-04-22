@@ -40,32 +40,32 @@ loop1_HW1:
 	loop2End_HW1:
 	
 	#update prev nodes (rax and rbx)
-	testq (%rax), (%rax)
+	testq %rax, %rax
 	je valNodeIsHead_HW1
 	
-	lea 4(%rax), (%rax)
-	lea (%rdi), (%rax)
+	lea 4(%rax), %rax
+	lea (%rdi), %rax
 	
 	jmp valNodeIsHeadEnd_HW1
 	
 	valNodeIsHead_HW1:
 	movq head(%rip), %rdx
-	lea (%rdi), (%rdx)
+	lea (%rdi), %rdx
 	
 	valNodeIsHeadEnd_HW1:
 	
-	testq (%rbx), (%rbx)
+	testq %rbx, %rbx
 	je sourceIsHead_HW1
 	
-	lea 4(%rbx), (%rbx)
-	lea (%rcx), (%rbx)
+	lea 4(%rbx), %rbx
+	lea (%rcx), %rbx
 	
 	jmp sourceIsHeadEnd_HW1
 	
 	sourceIsHead_HW1:
 	
 	movq head(%rip), %rdx
-	lea (%rcx), (%rdx)
+	lea (%rcx), %rdx
 	
 	sourceIsHeadEnd_HW1:
 	
