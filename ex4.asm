@@ -71,7 +71,7 @@ loop1_HW1:
 	
 	#swap next nodes
 	lea 4(%rdi), %rax
-	lea 4(%rci), %rbx
+	lea 4(%rcx), %rbx
 	
 	mov %rax, %rdx
 	mov %rbx, %rax
