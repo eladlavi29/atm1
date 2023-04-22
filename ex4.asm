@@ -90,7 +90,7 @@ loop1_HW1:
 	ValNotEqual_HW1:
 	
 	#Iterate through the list
-	lea %rdi, %rbx
+	lea (%rdi), %rbx
 	movq 4(%rdi), %rdi
 	testq %rdi, %rdi
 	jne loop1_HW1
