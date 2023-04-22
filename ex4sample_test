@@ -2,7 +2,8 @@
 
 .section .text
 
-  cmpq $1, $1
+  xor %rax, %rax
+  testq %rax, %rax
   jne bad_exit
 
   movq $60, %rax
