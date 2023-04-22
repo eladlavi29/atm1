@@ -3,7 +3,7 @@
 .section .text
 
   mov $A, %rax
-  cmpq $4, (%rax)
+  cmpl $4, (%rax)
   jne bad_exit
   
   movq $60, %rax
