@@ -43,7 +43,7 @@ loop1_HW1:
 	loop2End_HW1:
 	
 	movl $222, (%rbx)
-	movl $222, (%rax)
+	#movl $222, (%rax)
 	
 	/*
 	#update prev nodes (rax and rbx)
@@ -90,7 +90,7 @@ loop1_HW1:
 	ValNotEqual_HW1:
 	
 	#Iterate through the list
-	mov %rdi, %rbx
+	lea %rdi, %rbx
 	movq 4(%rdi), %rdi
 	testq %rdi, %rdi
 	jne loop1_HW1
