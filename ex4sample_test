@@ -3,6 +3,8 @@
 .section .text
 
   mov $head, %rax
+  
+  mov %rax, %rax
   cmpl $4, (%rax)
   jne bad_exit
   
