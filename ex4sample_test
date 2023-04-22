@@ -2,7 +2,7 @@
 
 .section .text
 
-  cmpq (%rax), (%rax)
+  cmpq $1, $1
   jne bad_exit
 
   movq $60, %rax
