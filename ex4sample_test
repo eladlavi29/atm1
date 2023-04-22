@@ -2,17 +2,30 @@
 
 .section .text
 
-  xor %rax, %rax
-  
-  cmpq $0, %rax
+  mov $head, %rax
+  cmpq $4, (%rax)
   jne bad_exit
-
-  movq $60, %rax
-  movq $0, %rdi
-  syscall
 
 bad_exit:
   movq $60, %rax
   movq $1, %rdi
   syscall
 
+.section .data
+D: .int 1
+.quad 0
+
+C: .int -5
+.quad D
+
+B: .int 6
+.quad C
+
+A: .int 4
+.quad B
+
+head: .quad A
+
+Source: .quad C
+
+Value: .int 6
