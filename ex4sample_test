@@ -14,10 +14,10 @@
   cmpl $-5, (%rax)
   jne bad_exit
   
-  /*
   mov 4(%rax), %rax
   cmpl $1, 8(%rax)
   jne bad_exit
+  /*
   */
   
   movq $60, %rax
