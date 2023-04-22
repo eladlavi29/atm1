@@ -2,16 +2,15 @@
 
 .section .text
 
-  mov $1, %rax
-  cmpq $1, (%rax)
+  cmpq (%rax), (%rax)
   jne bad_exit
 
   movq $60, %rax
-  movq $1, %rdi
+  movq $0, %rdi
   syscall
 
 bad_exit:
   movq $60, %rax
-  movq $0, %rdi
+  movq $1, %rdi
   syscall
 
