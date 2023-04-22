@@ -3,19 +3,19 @@
 .section .text
 
   mov head(%rip), %rax
-  cmpl $5, (%rax)
+  cmpl $4, (%rax)
   jne bad_exit
   
   mov 4(%rax), %rax
-  cmpl $7, (%rax)
+  cmpl $22, (%rax)
   jne bad_exit
   
   mov 4(%rax), %rax
-  cmpl $-4, (%rax)
+  cmpl $-5, (%rax)
   jne bad_exit
   
   mov 4(%rax), %rax
-  cmpl $2, (%rax)
+  cmpl $1, (%rax)
   jne bad_exit
   
   movq $60, %rax

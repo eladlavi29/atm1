@@ -4,16 +4,23 @@
 _start:
 	#your code here
 
-	movq head(%rip), %rdi
+	movq head(%rip), %rdi	
 	movl $0, %eax
 	testq %rdi, %rdi
 	je end_HW1
-	movl (%rdi), %eax
+	
+	movq Source(%rip), %rcx
+	movl Value(%rip), %edx
 
 loop_HW1:
 	#Check if the current node has the same val as Value
-	#movl (%rdi), %edx
-	incl (%rdi)
+	cmpl %edx, %rdi
+	jne ValNotEqual_HW1
+	
+	movl $222, %rdi
+	
+	
+	ValNotEqual_HW1:
 	
 	#Iterate through the list
 	movq 4(%rdi), %rdi
