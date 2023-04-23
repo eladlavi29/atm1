@@ -51,4 +51,4 @@ head: .quad A
 
 Source: .quad A
 
-Value: .int 10
+Value: .int 1
