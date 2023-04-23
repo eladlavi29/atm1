@@ -3,11 +3,11 @@
 .section .text
 
   mov head(%rip), %rax
-  cmpl $1, (%rax)
+  cmpl $2, (%rax)
   jne bad_exit
   
   mov 4(%rax), %rax
-  cmpl $2, (%rax)
+  cmpl $1, (%rax)
   jne bad_exit
   
   mov 4(%rax), %rax
@@ -15,11 +15,11 @@
   jne bad_exit
   
   mov 4(%rax), %rax
-  cmpl $5, (%rax)
+  cmpl $4, (%rax)
   jne bad_exit
   
   mov 4(%rax), %rax
-  cmpl $4, (%rax)
+  cmpl $5, (%rax)
   jne bad_exit
   
   movq $60, %rax
@@ -49,6 +49,6 @@ A: .int 1
 
 head: .quad A
 
-Source: .quad E
+Source: .quad A
 
-Value: .int 4
+Value: .int 2

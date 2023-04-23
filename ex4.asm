@@ -51,8 +51,8 @@ loop1_HW1:
 	jmp valNodeIsHeadEnd_HW1
 	
 	valNodeIsHead_HW1:
-	movq head(%rip), %rdx
-	mov %rcx, %rdx
+	leaq head(%rip), %rdx
+	mov %rcx, (%rdx)
 	
 	valNodeIsHeadEnd_HW1:
 	
@@ -67,8 +67,8 @@ loop1_HW1:
 	
 	sourceIsHead_HW1:
 	
-	movq head(%rip), %rdx
-	mov %rdi, %rdx
+	leaq head(%rip), %rdx
+	mov %rdi, (%rdx)
 	
 	sourceIsHeadEnd_HW1:
 	
