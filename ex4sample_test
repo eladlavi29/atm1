@@ -3,19 +3,7 @@
 .section .text
 
   mov head(%rip), %rax
-  cmpl $5, (%rax)
-  jne bad_exit
-  
-  mov 4(%rax), %rax
-  cmpl $1, (%rax)
-  jne bad_exit
-  
-  mov 4(%rax), %rax
-  cmpl $3, (%rax)
-  jne bad_exit
-  
-  mov 4(%rax), %rax
-  cmpl $4, (%rax)
+  cmpl $2, (%rax)
   jne bad_exit
   
   mov 4(%rax), %rax
@@ -32,16 +20,7 @@ bad_exit:
   syscall
 
 .section .data
-E: .int 5
-.quad 0
-
-D: .int 4
-.quad E
-
-C: .int 3
-.quad D
-
-B: .int 1
+B: .int 2
 .quad C
 
 A: .int 1
@@ -49,6 +28,6 @@ A: .int 1
 
 head: .quad A
 
-Source: .quad E
+Source: .quad B
 
 Value: .int 1
