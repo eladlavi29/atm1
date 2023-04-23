@@ -41,7 +41,7 @@ loop1_HW1:
 		
 	loop2End_HW1:
 	
-	
+	/*
 	#update prev nodes (rax and rbx)
 	testq %rbx, %rbx
 	je valNodeIsHead_HW1
@@ -56,8 +56,9 @@ loop1_HW1:
 	mov %rcx, (%rdx)
 	
 	valNodeIsHeadEnd_HW1:
+	*/
 	
-	/*
+	
 	testq %rax, %rax
 	je sourceIsHead_HW1
 	
@@ -73,6 +74,7 @@ loop1_HW1:
 	
 	sourceIsHeadEnd_HW1:
 	
+	/*
 	#swap next nodes
 	lea 4(%rdi), %rbx
 	lea 4(%rcx), %rax
