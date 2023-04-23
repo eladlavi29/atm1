@@ -55,7 +55,7 @@ loop1_HW1:
 	lea (%rdi), %rdx
 	
 	valNodeIsHeadEnd_HW1:
-	
+	/*
 	testq %rbx, %rbx
 	je sourceIsHead_HW1
 	
@@ -70,7 +70,7 @@ loop1_HW1:
 	lea (%rcx), %rdx
 	
 	sourceIsHeadEnd_HW1:
-	/*
+	
 	#swap next nodes
 	lea 4(%rdi), %rax
 	lea 4(%rcx), %rbx

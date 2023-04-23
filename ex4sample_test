@@ -11,6 +11,10 @@
   jne bad_exit
   
   mov 4(%rax), %rax
+  cmpl $4, (%rax)
+  jne bad_exit
+  
+  mov 4(%rax), %rax
   cmpl $5, (%rax)
   jne bad_exit
   
