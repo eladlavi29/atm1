@@ -57,6 +57,7 @@ loop1_HW1:
 	
 	valNodeIsHeadEnd_HW1:
 	
+	/*
 	testq %rax, %rax
 	je sourceIsHead_HW1
 	
@@ -79,6 +80,7 @@ loop1_HW1:
 	mov %rax, %rdx
 	mov %rbx, (%rax)
 	mov %rdx, (%rbx)
+	*/
 	
 	jmp end_HW1
 	
