@@ -76,10 +76,11 @@ loop1_HW1:
 	mov 4(%rdi), %rdx
 	
 	lea 4(%rdi), %rax
-	mov 4(%rcx), %rax
+	mov 4(%rcx), %rbx
+	mov %rbx, (%rax)
 	
 	lea 4(%rcx), %rax
-	mov %rdx, %rax
+	mov %rdx, (%rax)
 	
 	jmp end_HW1
 	
