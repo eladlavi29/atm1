@@ -3,15 +3,15 @@
 .section .text
 
   mov head(%rip), %rax
-  cmpl $4, (%rax)
+  cmpl $1, (%rax)
   jne bad_exit
   
   mov 4(%rax), %rax
-  cmpl $-5, (%rax)
+  cmpl $1, (%rax)
   jne bad_exit
   
   mov 4(%rax), %rax
-  cmpl $6, (%rax)
+  cmpl $1, (%rax)
   jne bad_exit
   
   mov 4(%rax), %rax
@@ -31,13 +31,13 @@ bad_exit:
 D: .int 1
 .quad 0
 
-C: .int -5
+C: .int 1
 .quad D
 
-B: .int 6
+B: .int 1
 .quad C
 
-A: .int 4
+A: .int 1
 .quad B
 
 head: .quad A
