@@ -11,6 +11,14 @@
   jne bad_exit
   
   mov 4(%rax), %rax
+  cmpl $3, (%rax)
+  jne bad_exit
+  
+  mov 4(%rax), %rax
+  cmpl $2, (%rax)
+  jne bad_exit
+  
+  mov 4(%rax), %rax
   cmpl $5, (%rax)
   jne bad_exit
   
@@ -41,6 +49,6 @@ A: .int 1
 
 head: .quad A
 
-Source: .quad D
+Source: .quad E
 
-Value: .int 2
+Value: .int 3
