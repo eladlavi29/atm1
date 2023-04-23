@@ -21,7 +21,7 @@ bad_exit:
 
 .section .data
 B: .int 2
-.quad C
+.quad 0
 
 A: .int 1
 .quad B
