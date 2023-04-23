@@ -70,7 +70,7 @@ loop1_HW1:
 	lea (%rcx), %rdx
 	
 	sourceIsHeadEnd_HW1:
-	
+	/*
 	#swap next nodes
 	lea 4(%rdi), %rax
 	lea 4(%rcx), %rbx
@@ -78,6 +78,7 @@ loop1_HW1:
 	mov %rax, %rdx
 	mov %rbx, %rax
 	mov %rdx, %rbx
+	*/
 	
 	jmp end_HW1
 	
