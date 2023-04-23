@@ -43,7 +43,7 @@ loop1_HW1:
 	
 	movq head(%rip), %rdx
 	lea 4(%rbx), %rbx
-	mov %rdi, %rbx
+	mov %rdi, (%rbx)
 	
 	/*
 	#update prev nodes (rax and rbx)
