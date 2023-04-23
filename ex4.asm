@@ -41,10 +41,6 @@ loop1_HW1:
 		
 	loop2End_HW1:
 	
-	movl $222, (%rbx)
-	movl $222, (%rax)
-	
-	/*
 	#update prev nodes (rax and rbx)
 	testq %rax, %rax
 	je valNodeIsHead_HW1
@@ -82,7 +78,6 @@ loop1_HW1:
 	mov %rax, %rdx
 	mov %rbx, %rax
 	mov %rdx, %rbx
-	*/
 	
 	jmp end_HW1
 	
