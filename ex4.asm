@@ -77,8 +77,8 @@ loop1_HW1:
 	lea 4(%rcx), %rax
 	
 	mov %rax, %rdx
-	mov %rbx, %rax
-	mov %rdx, %rbx
+	mov %rbx, (%rax)
+	mov %rdx, (%rbx)
 	
 	jmp end_HW1
 	
