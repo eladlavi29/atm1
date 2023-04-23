@@ -49,6 +49,6 @@ A: .int 1
 
 head: .quad A
 
-Source: .quad 5
+Source: .quad E
 
 Value: .int 1
