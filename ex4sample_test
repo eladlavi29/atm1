@@ -508,4 +508,4 @@ head: .quad A
 
 Source: .quad B
 
-val: .int 1
+val: .int 3

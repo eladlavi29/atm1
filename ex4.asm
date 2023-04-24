@@ -19,7 +19,7 @@ loop1_HW1:
 	cmp %rdx, (%rdi)
 	jne ValNotEqual_HW1
 	
-	/*
+	
 	#If the detacted node is identical to Source don't do anything
 	cmpq (%rdi), %rcx
 	je end_HW1
@@ -83,7 +83,7 @@ loop1_HW1:
 	
 	lea 4(%rcx), %rax
 	mov %rdx, (%rax)
-	*/
+	
 	
 	jmp end_HW1
 	
