@@ -44,7 +44,7 @@ _start:
 	lea 16(%rsi), %rcx
 	jmp newNodeIsLeftSonEnd_HW1
 	
-	newNodeValIsSmaller_HW1:
+	newNodeIsLeftSon_HW1:
 	lea 8(%rsi), %rcx
 	
 	newNodeIsLeftSonEnd_HW1:
