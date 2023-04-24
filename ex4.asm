@@ -12,7 +12,8 @@ _start:
 	xor %rbx, %rbx #rbx will be the prev node of rdi
 	movl val(%rip), %edx
 	movq Source(%rip), %rcx
-
+	
+	/*
 loop1_HW1:
 	#Check if the current node has the same val as val
 	cmpl %edx, (%rdi)
@@ -91,6 +92,7 @@ loop1_HW1:
 	movq 4(%rdi), %rdi
 	testq %rdi, %rdi
 	jne loop1_HW1
+	*/
 
 end_HW1:
 
