@@ -13,12 +13,13 @@ _start:
 	movzx val(%rip), %rdx
 	movq Source(%rip), %rcx
 	
-	/*
+	
 loop1_HW1:
 	#Check if the current node has the same val as val
 	cmp %rdx, (%rdi)
 	jne ValNotEqual_HW1
 	
+	/*
 	#If the detacted node is identical to Source don't do anything
 	cmpq (%rdi), %rcx
 	je end_HW1
@@ -82,6 +83,7 @@ loop1_HW1:
 	
 	lea 4(%rcx), %rax
 	mov %rdx, (%rax)
+	*/
 	
 	jmp end_HW1
 	
@@ -92,7 +94,7 @@ loop1_HW1:
 	movq 8(%rdi), %rdi
 	testq %rdi, %rdi
 	jne loop1_HW1
-*/
+
 
 end_HW1:
 
