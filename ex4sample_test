@@ -1,12 +1,12 @@
+
+/*
 .global _start
 
   .section .text
 
-	/*
   movq $head, %rax
   cmpq $node_0, 0(%rax)
   jne bad_exit
-  */
 
   movq $node_0, %rax
   cmpq $917, (%rax)
@@ -473,9 +473,8 @@ bad_exit:
             .quad 0
   Source: .quad node_45
   val: .int 1824
+*/
 
-
-/*
 .global _start
 
 .section .text
@@ -509,4 +508,3 @@ head: .quad A
 Source: .quad B
 
 val: .int 1
-*/
