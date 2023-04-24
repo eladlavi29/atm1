@@ -32,5 +32,8 @@ _start:
 		
 		testq %rdi, %rdi
 		jne loop1_HW1
+		
+	#rdi contains the new leaf new node
+	movq $new_node, (%rdi)
 	
 end_HW1:
