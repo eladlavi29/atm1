@@ -1,3 +1,5 @@
+
+/*
 .global _start
 
   .section .text
@@ -470,13 +472,13 @@ bad_exit:
             .quad 650
             .quad 0
   Source: .quad node_45
-  val: .int 12919
+  val: .int 1824
+*/
 
-/*
 .global _start
 
 .section .text
-
+	/*
   mov head(%rip), %rax
   cmpq $2, (%rax)
   jne bad_exit
@@ -484,6 +486,7 @@ bad_exit:
   mov 8(%rax), %rax
   cmpq $1, (%rax)
   jne bad_exit
+  */
   
   movq $60, %rax
   movq $0, %rdi
@@ -506,4 +509,4 @@ head: .quad A
 Source: .quad B
 
 val: .int 1
-*/
+
