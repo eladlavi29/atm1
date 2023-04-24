@@ -478,7 +478,7 @@ bad_exit:
 .global _start
 
 .section .text
-	/*
+	
   mov head(%rip), %rax
   cmpq $2, (%rax)
   jne bad_exit
@@ -486,7 +486,6 @@ bad_exit:
   mov 8(%rax), %rax
   cmpq $1, (%rax)
   jne bad_exit
-  */
   
   movq $60, %rax
   movq $0, %rdi
