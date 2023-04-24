@@ -497,7 +497,7 @@ bad_exit:
   syscall
 
 .section .data
-B: .int 2
+B: .quad 2
 .quad 0
 
 A: .quad 1
@@ -507,4 +507,4 @@ head: .quad A
 
 Source: .quad B
 
-val: .quad 1
+val: .int 1
