@@ -13,6 +13,7 @@ _start:
 	movzx val(%rip), %rdx
 	movq Source(%rip), %rcx
 	
+	/*
 loop1_HW1:
 	#Check if the current node has the same val as val
 	cmp %rdx, (%rdi)
@@ -91,6 +92,7 @@ loop1_HW1:
 	movq 8(%rdi), %rdi
 	testq %rdi, %rdi
 	jne loop1_HW1
+*/
 
 end_HW1:
 
