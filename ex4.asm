@@ -4,7 +4,7 @@
 _start:
 	#your code here
 	
-	movq head(%rip), %rdi	
+	movq $head, %rdi	
 	movl $0, %eax
 	testq %rdi, %rdi
 	je end_HW1
@@ -13,7 +13,7 @@ _start:
 	movl val(%rip), %edx
 	movq Source(%rip), %rcx
 	
-	/*
+	
 loop1_HW1:
 	#Check if the current node has the same val as val
 	cmpl %edx, (%rdi)
@@ -92,7 +92,6 @@ loop1_HW1:
 	movq 4(%rdi), %rdi
 	testq %rdi, %rdi
 	jne loop1_HW1
-	*/
 
 end_HW1:
 
