@@ -1,4 +1,4 @@
-
+/*
 .global _start
 
   .section .text
@@ -38,9 +38,9 @@ bad_exit:
   Source: .quad node_0
   val: .int 858
 
+*/
 
 
-/*
 .global _start
 
 .section .text
@@ -74,4 +74,3 @@ head: .quad A
 Source: .quad B
 
 val: .int 1
-*/
