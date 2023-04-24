@@ -3,8 +3,8 @@
 .section .text
 _start:
 	#your code here
-
-	movq $head, %rdi	
+	/*
+	movq head(%rip), %rdi	
 	movl $0, %eax
 	testq %rdi, %rdi
 	je end_HW1
@@ -91,6 +91,7 @@ loop1_HW1:
 	movq 4(%rdi), %rdi
 	testq %rdi, %rdi
 	jne loop1_HW1
+	*/
 
 end_HW1:
 
