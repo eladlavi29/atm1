@@ -2,6 +2,10 @@
 
   .section .text
 
+  movq $60, %rax
+  movq $0, %rdi
+  syscall
+
   /*
 
   movq $node_0, %rax
@@ -163,7 +167,6 @@
   jne bad_exit
   cmpq $0, 16(%rax)
   jne bad_exit
-  */
 
 
   movq $60, %rax
@@ -259,3 +262,4 @@ bad_exit:
             .quad 0
   new_node: .quad 262, 0, 0
 
+*/
