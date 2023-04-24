@@ -12,6 +12,7 @@ _start:
 	movq new_node(%rip), %rdx
 	movq (%rdx), %rdx
 	
+	/*
 	#find the father of the new leaf new node
 	loop1_HW1:
 		#Check if the current node has the same val as val
@@ -33,5 +34,6 @@ _start:
 		
 		testq %rdi, %rdi
 		jne loop1_HW1
+	*/
 	
 end_HW1:
