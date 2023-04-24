@@ -46,10 +46,10 @@
   cmpq $828, (%rax)
   jne bad_exit
   cmpq $0, 8(%rax)
+  jne bad_exit
   
   #cmpq $new_node, 8(%rax)
   
-  jne bad_exit
   cmpq $0, 16(%rax)
   jne bad_exit
 
