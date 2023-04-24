@@ -500,11 +500,11 @@ bad_exit:
 B: .int 2
 .quad 0
 
-A: .int 1
+A: .quad 1
 .quad B
 
 head: .quad A
 
 Source: .quad B
 
-val: .int 1
+val: .quad 1
