@@ -31,7 +31,7 @@ bad_exit:
             .quad node_1
   node_1:
             .quad 2
-            .quad node_2
+            .quad 0
   
   Source: .quad node_0
   val: .int 858
