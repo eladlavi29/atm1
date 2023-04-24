@@ -10,13 +10,13 @@ _start:
 	je end_HW1
 	
 	xor %rbx, %rbx #rbx will be the prev node of rdi
-	movl val(%rip), %edx
+	movq val(%rip), %rdx
 	movq Source(%rip), %rcx
 	
 	
 loop1_HW1:
 	#Check if the current node has the same val as val
-	cmpl %edx, (%rdi)
+	cmp %rdx, (%rdi)
 	jne ValNotEqual_HW1
 	
 	#If the detacted node is identical to Source don't do anything
