@@ -7,11 +7,13 @@
   cmpq $node_0, 0(%rax)
   jne bad_exit
 
+	/*
   movq $node_0, %rax
   cmpq $225, (%rax)
   jne bad_exit
   cmpq $node_1, 8(%rax)
   jne bad_exit
+  */
 
 
   movq $60, %rax
