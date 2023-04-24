@@ -10,7 +10,7 @@ _start:
 	je end_HW1
 	
 	xor %rbx, %rbx #rbx will be the prev node of rdi
-	movq val(%rip), %rdx
+	movzx val(%rip), %rdx
 	movq Source(%rip), %rcx
 	
 	

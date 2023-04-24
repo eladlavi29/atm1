@@ -480,11 +480,11 @@ bad_exit:
 .section .text
 
   mov head(%rip), %rax
-  cmp $2, (%rax)
+  cmpq $2, (%rax)
   jne bad_exit
   
   mov 8(%rax), %rax
-  cmp $1, (%rax)
+  cmpq $1, (%rax)
   jne bad_exit
   
   movq $60, %rax
