@@ -2,9 +2,11 @@
 
   .section .text
 
+	/*
   movq $head, %rax
   cmpq $node_0, 0(%rax)
   jne bad_exit
+  */
 
   movq $node_0, %rax
   cmpq $917, (%rax)
