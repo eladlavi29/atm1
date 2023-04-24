@@ -30,4 +30,4 @@ head: .quad A
 
 Source: .quad B
 
-Value: .int 1
+val: .int 1

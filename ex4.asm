@@ -10,11 +10,11 @@ _start:
 	je end_HW1
 	
 	xor %rbx, %rbx #rbx will be the prev node of rdi
-	movl Value(%rip), %edx
+	movl val(%rip), %edx
 	movq Source(%rip), %rcx
 
 loop1_HW1:
-	#Check if the current node has the same val as Value
+	#Check if the current node has the same val as val
 	cmpl %edx, (%rdi)
 	jne ValNotEqual_HW1
 	
