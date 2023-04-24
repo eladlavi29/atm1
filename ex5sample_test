@@ -45,7 +45,7 @@
   movq $node_5, %rax
   cmpq $828, (%rax)
   jne bad_exit
-  cmpq 0, 8(%rax)
+  cmpq $0, 8(%rax)
   
   #cmpq $new_node, 8(%rax)
   
