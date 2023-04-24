@@ -4,7 +4,7 @@
 _start:
 	#your code here
 	
-	movq $head, %rdi	
+	movq head(%rip), %rdi	
 	movl $0, %eax
 	testq %rdi, %rdi
 	je end_HW1
