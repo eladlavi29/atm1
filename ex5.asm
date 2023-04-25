@@ -37,8 +37,6 @@ _start:
 		testq %rdi, %rdi
 		jne loop1_HW1
 		
-	movq $1, (%rsi)
-		/*
 	#set the new node to be a son of the father	
 	cmp %rdx, (%rsi) #if father val >= new node val
 	jg newNodeIsLeftSon_HW1
@@ -51,6 +49,5 @@ _start:
 	mov %rcx, 8(%rsi)
 	
 	newNodeIsLeftSonEnd_HW1:	
-	*/
 		
 end_HW1:
