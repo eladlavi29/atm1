@@ -23,7 +23,7 @@
   cmpq $node_2, 8(%rax)
   jne bad_exit
   cmpq $node_3, 16(%rax)
-  jne bad_exi
+  jne bad_exit
   
   /*
   movq $node_0, %rax
