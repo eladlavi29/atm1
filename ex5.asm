@@ -24,10 +24,10 @@ _start:
 		movq $1, (%rdi)
 		
 		#Iterate through the tree
-		cmp %rdx, (%rdi) #if current node val <= new node val
-		jl newNodeValIsSmaller_HW1
+		cmp %rdx, (%rdi) #if current node val >= new node val
+		jg newNodeValIsSmaller_HW1
 		
-		#if current node val > new node val
+		#if current node val < new node val
 		mov 16(%rdi), %rdi
 		jmp newNodeValIsSmallerEnd_HW1
 		
