@@ -15,6 +15,8 @@ _start:
 	
 	#find the father of the fathr of new node
 	loop1_HW1:
+		mov $1, (%rdi)
+	
 		mov %rdi, %rsi
 		#Check if the current node has the same val as val
 		cmp %rdx, (%rdi)
@@ -36,6 +38,7 @@ _start:
 		testq %rdi, %rdi
 		jne loop1_HW1
 		
+		/*
 	#set the new node to be a son of the father	
 	cmp %rdx, (%rsi) #if father val <= new node val
 	jl newNodeIsLeftSon_HW1
@@ -49,6 +52,7 @@ _start:
 	
 	newNodeIsLeftSonEnd_HW1:
 	
-	mov %rdx, (%rcx)
+	mov %rdx, (%rcx
+	*/
 	
 end_HW1:
