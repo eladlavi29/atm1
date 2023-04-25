@@ -50,7 +50,7 @@
   cmpq $0, 16(%rax)
   jne bad_exit
   
-	*/
+  /*
   movq $node_5, %rax
   cmpq $828, (%rax)
   jne bad_exit
