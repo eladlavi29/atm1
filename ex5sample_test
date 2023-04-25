@@ -10,7 +10,7 @@
   jne bad_exit
 
   movq $node_4, %rax
-  cmpq $44, (%rax)
+  cmpq $1, (%rax)
   jne bad_exit
   cmpq $0, 8(%rax)
   jne bad_exit
