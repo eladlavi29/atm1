@@ -15,7 +15,7 @@ _start:
 	
 	#find the father of the fathr of new node
 	loop1_HW1:
-		mov $1, (%rdi)
+		movq $1, (%rdi)
 	
 		mov %rdi, %rsi
 		#Check if the current node has the same val as val
