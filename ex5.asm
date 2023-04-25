@@ -52,6 +52,7 @@ _start:
 	
 	newNodeIsLeftSonEnd_HW1:
 	
+	movq new_node(%rip), %rdx
 	mov %rdx, (%rcx)
 	
 end_HW1:
