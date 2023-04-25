@@ -14,13 +14,13 @@ _start:
 	movq new_node(%rip), %rdx
 	
 	#find the father of the fathr of new node
-	loop1_HW1:
-		movq $1, (%rdi)
-	
+	loop1_HW1:	
 		mov %rdi, %rsi
 		#Check if the current node has the same val as val
 		cmp %rdx, (%rdi)
 		je end_HW1
+		
+		movq $1, (%rdi)
 		
 		#Iterate through the tree
 		cmp %rdx, (%rdi) #if current node val <= new node val
