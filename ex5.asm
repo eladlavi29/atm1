@@ -12,6 +12,7 @@ _start:
 	
 	#rdx contains the new node's val
 	movq new_node(%rip), %rdx
+	movq (%rdx), %rdx
 	
 	#find the father of the fathr of new node
 	loop1_HW1:	
