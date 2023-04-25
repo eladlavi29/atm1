@@ -31,13 +31,13 @@ loop1_HW1:
 	movq head(%rip), %rdx
 	
 	loop2_HW1:
-		cmp 8(%rdx), %rcx
+		cmp 4(%rdx), %rcx
 		jne preNodeNotFound_HW1
 			lea (%rdx), %rax
 			jmp loop2End_HW1
 		preNodeNotFound_HW1:
 				
-		mov 8(%rdx), %rdx
+		mov 4(%rdx), %rdx
 		testq %rdx, %rdx
 		jne loop2_HW1
 		
@@ -47,7 +47,7 @@ loop1_HW1:
 	testq %rbx, %rbx
 	je ValueNodeIsHead_HW1
 	
-	lea 8(%rbx), %rbx
+	lea 4(%rbx), %rbx
 	mov %rcx, (%rbx)
 	
 	jmp ValueNodeIsHeadEnd_HW1
@@ -62,7 +62,7 @@ loop1_HW1:
 	testq %rax, %rax
 	je sourceIsHead_HW1
 	
-	lea 8(%rax), %rax
+	lea 4(%rax), %rax
 	mov %rdi, (%rax)
 	
 	jmp sourceIsHeadEnd_HW1
@@ -75,13 +75,13 @@ loop1_HW1:
 	sourceIsHeadEnd_HW1:
 	
 	#swap next nodes
-	mov 8(%rdi), %rdx
+	mov 4(%rdi), %rdx
 	
-	lea 8(%rdi), %rax
-	mov 8(%rcx), %rbx
+	lea 4(%rdi), %rax
+	mov 4(%rcx), %rbx
 	mov %rbx, (%rax)
 	
-	lea 8(%rcx), %rax
+	lea 4(%rcx), %rax
 	mov %rdx, (%rax)
 	
 	
@@ -91,7 +91,7 @@ loop1_HW1:
 	
 	#Iterate through the list
 	lea (%rdi), %rbx
-	movq 8(%rdi), %rdi
+	movq 4(%rdi), %rdi
 	testq %rdi, %rdi
 	jne loop1_HW1
 
