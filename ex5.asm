@@ -20,9 +20,7 @@ _start:
 		#Check if the current node has the same val as val
 		cmp %rdx, (%rdi)
 		je end_HW1
-		
-		movq $1, (%rdi)
-		
+				
 		#Iterate through the tree
 		cmp %rdx, (%rdi) #if current node val >= new node val
 		jg newNodeValIsSmaller_HW1
