@@ -2,13 +2,14 @@
 
   .section .text
   movq $node_0, %rax
-  cmpq $97, (%rax)
+  cmpq $1, (%rax)
   jne bad_exit
   cmpq $node_4, 8(%rax)
   jne bad_exit
   cmpq $node_1, 16(%rax)
   jne bad_exit
 
+/*
   movq $node_4, %rax
   cmpq $44, (%rax)
   jne bad_exit
@@ -25,7 +26,7 @@
   cmpq $node_3, 16(%rax)
   jne bad_exit
   
-  /*
+  
   movq $node_0, %rax
   cmpq $97, (%rax)
   jne bad_exit

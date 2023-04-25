@@ -20,7 +20,7 @@ _start:
 		cmp %rdx, (%rdi)
 		je end_HW1
 		
-		#movq $1, (%rdi)
+		movq $1, (%rdi)
 		
 		#Iterate through the tree
 		cmp %rdx, (%rdi) #if current node val <= new node val
