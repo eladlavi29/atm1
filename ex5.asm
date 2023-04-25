@@ -52,6 +52,6 @@ _start:
 	
 	newNodeIsLeftSonEnd_HW1:
 	
-	mov %rdx, (%rcx
+	mov %rdx, (%rcx)
 	
 end_HW1:
