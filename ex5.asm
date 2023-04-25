@@ -41,11 +41,11 @@ _start:
 	jg newNodeIsLeftSon_HW1
 	
 	#if current node val < new node val
-	mov $new_node, 16(%rsi)
+	movq $new_node, 16(%rsi)
 	jmp newNodeIsLeftSonEnd_HW1
 	
 	newNodeIsLeftSon_HW1:
-	mov $new_node, 8(%rsi)
+	movq $new_node, 8(%rsi)
 	
 	newNodeIsLeftSonEnd_HW1:	
 		
