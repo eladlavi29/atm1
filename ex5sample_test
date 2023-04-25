@@ -42,17 +42,6 @@
   cmpq $node_5, 16(%rax)
   jne bad_exit
 
-  /*
-	movq $node_5, %rax
-  cmpq $828, (%rax)
-  jne bad_exit
-  cmpq $0, 8(%rax)
-  jne bad_exit
-  cmpq $new_node, 16(%rax)
-  jne bad_exit
-  */
-
-  /*
   movq $node_5, %rax
   cmpq $828, (%rax)
   jne bad_exit
@@ -60,7 +49,6 @@
   jne bad_exit
   cmpq $0, 16(%rax)
   jne bad_exit
-  */
 
   movq $new_node, %rax
   cmpq $671, (%rax)
