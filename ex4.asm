@@ -10,12 +10,12 @@ _start:
 	je end_HW1
 	
 	xor %rbx, %rbx #rbx will be the prev node of rdi
-	movzx val(%rip), %rdx
+	movzx Value(%rip), %rdx
 	movq Source(%rip), %rcx
 	
 	
 loop1_HW1:
-	#Check if the current node has the same val as val
+	#Check if the current node has the same Value as Value
 	cmp %rdx, (%rdi)
 	jne ValNotEqual_HW1
 	
@@ -45,18 +45,18 @@ loop1_HW1:
 	
 	#update prev nodes (rax and rbx)
 	testq %rbx, %rbx
-	je valNodeIsHead_HW1
+	je ValueNodeIsHead_HW1
 	
 	lea 8(%rbx), %rbx
 	mov %rcx, (%rbx)
 	
-	jmp valNodeIsHeadEnd_HW1
+	jmp ValueNodeIsHeadEnd_HW1
 	
-	valNodeIsHead_HW1:
+	ValueNodeIsHead_HW1:
 	leaq head(%rip), %rdx
 	mov %rcx, (%rdx)
 	
-	valNodeIsHeadEnd_HW1:
+	ValueNodeIsHeadEnd_HW1:
 	
 	
 	testq %rax, %rax
