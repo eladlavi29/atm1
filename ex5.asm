@@ -11,8 +11,8 @@ _start:
 	je end_HW1
 	
 	#rdx contains the new node's val
-	movq new_node(%rip), %rdx
-	movq %rdx, %rdx
+	movq new_node(%rip), %rcx
+	movq %rcx, %rdx
 	
 	#find the father of the fathr of new node
 	loop1_HW1:	
@@ -44,15 +44,12 @@ _start:
 	jg newNodeIsLeftSon_HW1
 	
 	#if current node val < new node val
-	lea 16(%rsi), %rcx
+	mov %rcx, 16(%rsi)
 	jmp newNodeIsLeftSonEnd_HW1
 	
 	newNodeIsLeftSon_HW1:
-	lea 8(%rsi), %rcx
+	mov %rcx, 8(%rsi)
 	
-	newNodeIsLeftSonEnd_HW1:
-	
-	movq new_node(%rip), %rdx
-	mov %rdx, (%rcx)
-	
+	newNodeIsLeftSonEnd_HW1:	
+		
 end_HW1:
