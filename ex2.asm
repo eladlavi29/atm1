@@ -21,6 +21,6 @@ jmp loop_HW1
 
 
 
-neg_HW1: movq %rax, (%rcx)
+neg_HW1: movl %eax, (%rcx)
 
 end_HW1:
