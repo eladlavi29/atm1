@@ -29,11 +29,10 @@ keyMixing:
 	pushq %rbp
 	movq %rsp, rbp
 	subq $8, %rsp
-	xorl -4(%rbp)
-	xorl -8(%rbp)
+	movl $0, -4(%rbp)
 	
 	loop1_keyMixing:
-		xorl -8(%rbp)
+		movl $0, -8(%rbp)
 		
 		loop2_keyMixing:
 		
@@ -43,13 +42,13 @@ keyMixing:
 			movq (msg_len), %rdx
 			syscall
 		
-			decq -8(%rbp)
-			testq -8(%rbp)
-			jz loop2_keyMixing
+			decl -8(%rbp)
+			cmpl $0, -8(%rbp)
+			jg loop2_keyMixing
 			
-		decq -4(%rbp)
-		testq -4(%rbp)
-		jz loop1_keyMixing
+		decl -4(%rbp)
+		cmpl $0, -4(%rbp)
+		jg loop2_keyMixing
 	
 	leave
 	ret
